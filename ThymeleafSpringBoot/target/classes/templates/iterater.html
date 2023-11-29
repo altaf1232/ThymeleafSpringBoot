@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Example of loop</title>
+</head>
+<body>
+     <h1>Going to traverse element in collection </h1>
+    <!--  here i am print this data in controller -->
+    <h1 th:text="${names}"></h1>
+   <!--  aager aapko eaak eaak karkey value fetch karna hai tu used karn hai <ul></ul> likho aaur 
+    iss key aander <li> </li> likho -->
+   <ul>
+       <li th:each="n,status : ${names}">
+         <!--  <span th:text="${status.odd} ? 'color:red' : ' ' " th:text="${status.index+1}+' '+${n}"></span> --> -->
+          <span th:text="${status.index}+' '+${n}"></span>   <!-- span iss ka used huwa hai names varivale ko print karne key liye -->
+               <!--   ${status.index} iss ka used huta hai postion define karne key liye kon sa index per hai    -->
+       </li>   
+   </ul>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>conditional statement in Thymeleaf_a</title>
+</head>
+<body>
+      
+     <h1>conditional statement in Thymeleaf_a</h1>
+     <!-- here is work your Elvis Operator key through -->
+     <h1>Use is 
+         <span 
+         th:style="${isActive} ? 'color:green' :'color:red' "
+         th:text="${isActive} ? 'Active' : 'notActive'"> 
+        </span>
+        
+             <!--  <-------Stpe(1)-----> -->
+       <!--   jab aap ka view ka data aaur controller ka data match huga tabhi aap UAI wala data show 
+         karega but yaha per view ma M aaur cotroller F hai tu iss liye nahi show hu raha hai  --> 
+    
+         <!-- <h1 th:if="${gender}=='M'">Male</h1>
+         <h1>Female</h1> -->
+        
+     </h1>
+     
+          <!--   <-------Stpe(2)----->  -->
+      <!--   jab aap ka view ka data aaur controller ka data match huga tabhi aap UAI wala data show 
+      karega but yaha per view ma M aaur cotroller M hai tu iss liye data show hu raha hai  -->  
+     
+     <!-- <h1 th:if="${gender}=='M'">Male</h1>
+          <h1>Female</h1> -->
+     
+      <!--   <-------Stpe(3, A)-----> -->
+    <!--  ya condition if-unless else ka kaam karta hai  --> 
+     <!--here is work your Unless key through -->
+   <!--   aager aapka view ka data matlab jsp ka data match huga tu if chalega nahi tu aap ka unless chalega -->  
+     <!--  <h1 th:if="${gender}=='M'">Male</h1>
+      <h1 th:unless="${gender}=='M'">Female</h1> --> -->
+      
+      
+      <!--   <-------Stpe(3,B)-----> -->
+    <!--  ya condition if-unless else ka kaam karta hai  --> 
+     <!--here is work your if-Unless key through -->
+    <!--   aager aapka view ka data matlab jsp ka data match huga tu if chalega but controller ma bhi same huna chaye tu aap ka if chalega but yaha per match hai  -->  
+      <!-- <h1 th:if="${gender}=='M'">Male</h1>
+      <h1 th:unless="${gender}=='M'">Female</h1> --> -->
+      
+      
+      <!--  here is stared your switch case -->
+       <div th:switch="${#lists.size(mylist)}">
+           <h1 th:case="'0'">List contain zero element</h1>
+           <h2 th:case="'1'">List contain one element</h2>
+           <h1 th:case="'*'">List contain more then one element</h1>
+      </div>
+     
+</body>
+</html>

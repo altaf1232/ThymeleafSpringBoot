@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+      <!--  aap layout content key aander servic.html ya about.html koi bhi aaraha huga aaur ju content key aander 
+        aaraha huga uss ko ham divkey aander write kar dengay -->
+<head>
+<meta charset="ISO-8859-1">
+<title>Base this base page</title>
+ <!--  here is link your css template -->
+ <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+  
+  <h1>this is common header</h1>
+  
+  
+  <div  th:replace="${content}"></div>
+  
+  <h1>this is common footer</h1>
+  
+</body>
+</html>
+
+   <!-- Step 1 -->
+   
+  <!--  aboutnew.html ma aap content palce per section pass kardiya hai tu aapka section gaya base.html
+   layout wale content ma aur content ko replace kardiya hu div ma  --> 
+   

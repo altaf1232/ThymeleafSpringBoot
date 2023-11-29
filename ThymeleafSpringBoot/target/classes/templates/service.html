@@ -1,0 +1,46 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>here is your services page</title>
+</head>
+<body>
+      <!-- replace karne key liye aapne service .html ma aana huga -->
+      
+      <h1>this are services provided by learnCode with altafMalik</h1>
+       
+      <!-- going to bring footer here -->
+     <!--  yaha per aapko used karna huga aapne footer file aaur uss ka name tu hamre file ka name hai footer 
+         aaur footer ka name hai footer1 
+     -->
+    <!--  here is used your  replace tag  -->
+     <!--  <footer id="hostTag" th:replace="footer::footer1"> 
+      
+      </footer>
+       -->
+        <!-- here is insert key case ma aapka footer file wala tag key aandre ju data hai wo transfer hu jayega aap key 
+          service tag key aander ju aap na footer define kiya hai uss key aander  -->
+        <!--   here is used insert tag  -->
+      <!--  <footer id="hostTag" th:insert="footer::footer1"> 
+      
+      </footer> -->
+      <!--   here is started your include -->
+     <!--   include tag kiya karta hai ki footer key aander footer wale tag ko chod dega  -->
+      <!--  <footer id="hostTag" th:include="footer::footer1"> 
+      
+      </footer> 
+      -->
+     <!-- how to pass daynamic value to other template while including -->
+      <!--   yaha per ju hamne service key aander value pass kiya hai wo hamare footer per gaye hai  -->
+      <!--   <footer id="hostTag" th:replace="footer::footer1('this is titel','this is sub')"> 
+        
+      </footer> -->
+      
+      
+         <!--  //here is statred your second way -->
+       <footer id="hostTag" th:replace="footer::footer1(${titel},${subtitel})"> 
+        
+       </footer>
+       
+</body>
+</html>

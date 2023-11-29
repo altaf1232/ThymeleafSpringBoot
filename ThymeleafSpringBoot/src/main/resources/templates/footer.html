@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Footer Template here</title>
+</head>
+<body>
+        <!-- aap ju bhi value pass karogaye wo titel key aander iss tag key aander aa jayega <h1 th:text="${titel}"></h1> -->
+        <!-- jab bhi aapko footer ko include karna hai tu two value pass karni hai  -->
+       <!-- <footer id="fragmentTag" th:fragment="footer1(titel,substitel)"> -->
+       
+       <!--  //here is statred your second way -->
+      <footer id="fragmentTag" th:fragment="footer1(titel,substitel)"> 
+           <div class="container" >
+           
+           <h1 th:text="${titel}"></h1>
+           <h2 th:text="${substitel}"></h2><!--    service ki value footer ma aaye hai  -->
+           <h3>feel free to connect and work with me</h3>
+          
+           <p>This is a good way of the work</p>
+          
+           </div>
+      </footer>
+</body>
+</html>
